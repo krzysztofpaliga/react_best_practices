@@ -27,3 +27,15 @@ AGENDA:
    - dont pass setState function through intermediaries ("prop drilling") _instead_ use State management solution OR use Children Pattern (additional benefit: rerender of parent does not cause rerender of children).
    - setState((prev) => [...prev, {...}] allows no additional logic; better to use an updater function handleAddItem(item: Item || itemMembers) which is passed down
 9. Use convention: onAddTodo={handleAddTodo} and/or onClick={handleClickEvent} (keeping components lean/reusable)
+10. Try not to repeat:
+   - the same calculations, if not necessary, on rerendering of a component.
+      const result = useMemo(() => { return calculation }, [params])
+   - recreation of functions
+      const myFunc = useCallback(() => (input) => { ... }, [input params])
+   - recreation of objects
+      useMemo({Object Or Array});
+      Dont use for state!   
+   - rerendering of components
+      const ItemComponent = memo(function ({onAddItem}: ItemFormProps) {...}
+      This way components which use myFunc as prop, also do not get rerendered, if the props dont change
+   
