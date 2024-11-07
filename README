@@ -38,4 +38,12 @@ AGENDA:
    - rerendering of components
       const ItemComponent = memo(function ({onAddItem}: ItemFormProps) {...}
       This way components which use myFunc as prop, also do not get rerendered, if the props dont change
-   
+11.   setState((prev) => prev+1) and also
+      setState((prev) => prev+1)
+      setState((prev) => prev+1)
+12.   instead of using 
+         useState(false)
+      use 
+         Status = 'idle' | 'loading' | 'error' | 'success'
+         useState<Status>('idle')
+13.   Single source of truth: Keep track of an 'active' or 'selected' item by its id, dont duplicate the whole object
