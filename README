@@ -47,3 +47,12 @@ AGENDA:
          Status = 'idle' | 'loading' | 'error' | 'success'
          useState<Status>('idle')
 13.   Single source of truth: Keep track of an 'active' or 'selected' item by its id, dont duplicate the whole object
+14.   "use the URL for some state (filters, pagination, etc.), not useState" URL as single source of truth. URL can be bookmarked or shared with someone else and result in the exact same view.
+15.   "Keep useEffect simple: one concern per useEffect"
+         const [todos, setTodos] = useState([]);
+         useEffect(() => {
+            localStorage.setItem("todos", JSON.stringify(todos));
+         }, [todos]);
+         useEffect(() => {
+            document.addEventListener("keydown", handleEscapeKey);
+         }, []);
