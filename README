@@ -56,3 +56,6 @@ AGENDA:
          useEffect(() => {
             document.addEventListener("keydown", handleEscapeKey);
          }, []);
+16.   Consider alternatives to fetching data in useEffect. Usually it results in refetching the same data, if we move back and forth in the UI list, because there is no caching.
+         - To be further researched: useQuery hook from React Query or SWR or Next.js
+17.    Messy, Big components are a Code Smell
