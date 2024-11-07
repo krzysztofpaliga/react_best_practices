@@ -23,5 +23,7 @@ AGENDA:
    - agnostic to specific use case
    - reusable to other use cases
    - dont pass state if not necessarily nedded
+8. Dont pass down SetState, insted use a separate event handler function
    - dont pass setState function through intermediaries ("prop drilling") _instead_ use State management solution OR use Children Pattern (additional benefit: rerender of parent does not cause rerender of children).
    - setState((prev) => [...prev, {...}] allows no additional logic; better to use an updater function handleAddItem(item: Item || itemMembers) which is passed down
+9. Use convention: onAddTodo={handleAddTodo} and/or onClick={handleClickEvent} (keeping components lean/reusable)
