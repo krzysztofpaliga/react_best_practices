@@ -13,3 +13,6 @@ AGENDA:
    - To be further researched: State management: Context API, Zustand, Redux
 3. Well structured project, by using Components for reusable and/or distinct UI elements.
 4. Avoid unnecessary <div></div> by using <></>.
+5. Don't add layout styles to reusable components. Options to use:
+   - wrapping with <div></div>
+   - className prop which gets merged with the reusable one
