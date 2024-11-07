@@ -16,3 +16,4 @@ AGENDA:
 5. Don't add layout styles to reusable components. Options to use:
    - wrapping with <div></div>
    - className prop which gets merged with the reusable one
+6. Use TypeScript to catch low hanging fruit bugs.
