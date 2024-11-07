@@ -12,3 +12,4 @@ AGENDA:
 2. Consistency in project structure.
    - To be further researched: State management: Context API, Zustand, Redux
 3. Well structured project, by using Components for reusable and/or distinct UI elements.
+4. Avoid unnecessary <div></div> by using <></>.
