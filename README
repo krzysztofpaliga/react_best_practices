@@ -17,3 +17,11 @@ AGENDA:
    - wrapping with <div></div>
    - className prop which gets merged with the reusable one
 6. Use TypeScript to catch low hanging fruit bugs.
+7. Keep components:
+   - simple (often dumb)
+   - rather general than specific in use
+   - agnostic to specific use case
+   - reusable to other use cases
+   - dont pass state if not necessarily nedded
+   - dont pass setState function through intermediaries ("prop drilling") _instead_ use State management solution OR use Children Pattern (additional benefit: rerender of parent does not cause rerender of children).
+   - setState((prev) => [...prev, {...}] allows no additional logic; better to use an updater function handleAddItem(item: Item || itemMembers) which is passed down
