@@ -10,3 +10,4 @@ No working code was introduced. Only snippets.
 AGENDA:
 1. Keeping project wide constants in a separate file.
 2. Consistency in project structure.
+   - To be further researched: State management: Context API, Zustand, Redux
